@@ -39,3 +39,23 @@ let myObj = {
 };
 
 console.log(myObj.meals[3]); */
+
+function people(name, jobTitle) {
+  return {
+    name,
+    jobTitle
+  };
+}
+
+const arr = [people('edison', 'inventor'), people('jefferson', 'president'), people('Bruce Wayne', 'Batman')];
+
+
+function objLoop(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(`${arr[i].name} ${arr[i].jobTitle}`);
+  }
+}
+
+objLoop(arr);
+
+
