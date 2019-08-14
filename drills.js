@@ -12,3 +12,20 @@ let loaf = {
 console.log(loaf.flour);
 console.log(loaf.water);
 console.log(loaf.hydration());
+
+
+const myObj = {
+  foo : 'bar',
+  bar : 'foo',
+  fum : 'fee',
+  quux : 'quix',
+  spam : 'don\'t like'
+}
+
+function loops(myObj) {
+  for (const prop in myObj) {
+    console.log(`${prop} ${myObj[prop]}`);
+  }
+}
+
+loops(myObj);
