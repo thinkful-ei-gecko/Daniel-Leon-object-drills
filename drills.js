@@ -40,7 +40,7 @@ let myObj = {
 
 console.log(myObj.meals[3]); 
 
-*/
+
 // Drill #4&5
 function people(name, jobTitle, boss) {
   return {
@@ -95,4 +95,46 @@ function decodeWords(str, cipher) {
 }
 
 console.log(decodeWords(words, cipher));
+*/
 
+//Drill 6
+
+function createCharacter(name, nickname, race, origin, attack, defense) {
+  return {
+    name,
+    nickname,
+    race,
+    origin,
+    attack,
+    defense,
+    describe() {
+      console.log(`${this.name} is a ${this.race} from ${this.origin}`);
+    },
+    evaluateFight(character) {
+      //X is character damage
+      //Y is your damage
+      //-Your opponet takes X damage, you take Y damage-
+      
+      if (this.attack > character.defense) {
+        let x = this.attack-character.defense;
+      }
+      else { 
+        let x = 0;
+      }
+      if (this.defense >= character.attack) {
+        let y = 0;
+      }
+      else { 
+        let y = character.attack - this.defense;
+      }
+      return console.log(`Your opponent takes ${x} damage and you receive ${y} damage`);
+    }
+  };
+}
+
+let characters = [createCharacter('Gandalf the White','gandalf','Wizard','Middle Earth',10,6),createCharacter('Bilbo Baggins','Bilbo','Hobbit','The Shire',2,1),createCharacter('Frodo Baggins','Frodo','The Hobbit','The Shire',3,2),createCharacter('Aragorn son of Arathorn','Aragorn','Man','Dunnedain',6,8),createCharacter('Legolas','Legolas','Elf','Woodland Realm',8,5)];
+characters.push(['Arwen Undomiel','Arwen','Half-Elf','Rivendell',10,10]);
+let found = characters.find((element) => element.nickname === 'Aragorn');
+found.describe();
+let hobbitPeople = characters.filter((element) => element.race === 'Hobbit');
+let aboveFive = characters.filter((element) => element.attack > 5);
