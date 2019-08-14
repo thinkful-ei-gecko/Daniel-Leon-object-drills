@@ -66,4 +66,33 @@ function objLoop(arr) {
 
 objLoop(arr);
 
+const words = 'craft block argon meter bells brown croon droop';
+
+
+const cipher = {
+  a: 2,
+  b: 3,
+  c: 4, 
+  d: 5
+};
+
+function decodeWords(str, cipher) {
+  let code = str.split(' ');
+  let message = '';
+  for (let i = 0; i < code.length; i++) {
+    if (Object.keys(cipher).includes(code[i].charAt(0))) {
+      for (let key in cipher) {
+        if (key === code[i].charAt(0)) {
+          message += code[i].charAt(cipher[key] -1);
+        }
+      }
+    }
+    else {
+      message += ' ';
+    }
+  }
+  return message;
+}
+
+console.log(decodeWords(words, cipher));
 
