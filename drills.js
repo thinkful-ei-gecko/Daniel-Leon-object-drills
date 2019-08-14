@@ -163,3 +163,12 @@ function findOne(arr, query) {
 }
 
 console.log(findOne(HEROES, { id: 2 }));
+
+
+//findOne(arr, query)
+//take the query, find out how many keys are in it
+//cycle through the code ^ many times
+  //cycle through the heroes code and check if the key matches the others
+    //if it does, check the next key in that object and see if the value matches
+      //if it does, then return that object
+  //if it doesn't, return null
