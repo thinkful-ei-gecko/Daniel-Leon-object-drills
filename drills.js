@@ -38,21 +38,29 @@ let myObj = {
   meals : ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
 };
 
-console.log(myObj.meals[3]); */
+console.log(myObj.meals[3]); 
 
-function people(name, jobTitle) {
+*/
+// Drill #4&5
+function people(name, jobTitle, boss) {
   return {
     name,
-    jobTitle
+    jobTitle,
+    boss
   };
 }
 
-const arr = [people('edison', 'inventor'), people('jefferson', 'president'), people('Bruce Wayne', 'Batman')];
+const arr = [people('edison', 'inventor', 'Elon Musk'), people('jefferson', 'president','Elon Musk'), people('Bruce Wayne', 'Batman','Elon Musk'),people('Elon Musk', 'Owner')];
 
 
 function objLoop(arr) {
   for (let i = 0; i < arr.length; i++) {
-    console.log(`${arr[i].name} ${arr[i].jobTitle}`);
+    if (!arr[i].boss) {
+      console.log(`${arr[i].name} ${arr[i].jobTitle} doesn't report to anybody`);
+    }
+    else {
+      console.log(`${arr[i].name} ${arr[i].jobTitle} reports to ${arr[i].boss}`);
+    }
   }
 }
 
