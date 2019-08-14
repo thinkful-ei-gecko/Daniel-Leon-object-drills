@@ -151,22 +151,45 @@ const HEROES = [
   { id: 7, name: 'Hulk', squad: 'Avengers' },
 ];
 
-function findOne(arr, query) {
-  for (let i = 0; i < arr.length; i++) {
-    for (let prop in query) {
-      if (query[prop] === arr[i][prop]) {
-        return null;
-      }
-    }
-    return arr[i];
-  }
-}
+// console.log(HEROES['Object.keys(HEROES[1])[1]']);
 
-console.log(findOne(HEROES, { id: 2 }));
+let someHeroes = Object.keys(HEROES).map((key) =>  HEROES[key]);
+console.log(someHeroes);
 
+
+// function findOne(arr, query) {
+//   for (let i = 0; i < Object.keys(query).length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       console.log(j + 'this is j');
+//       for (let k = 0; k < Object.keys(arr)[j]; k++) {
+//         console.log(k + 'this is k');
+//         console.log(arr[j][k]);
+//         console.log(Object.keys(query)[i] + 'this is query object keys');
+//         if (Object.keys(query)[i] === arr[j][k]) {
+//           if (Object.values(query)[i] === Object.values(arr[j][k])) {
+//             let answer = arr[j];
+//             for (let prop in query) {
+//               if (query[prop] !== arr[j][prop]) {
+//                 return 'could not find';
+//               }
+//             }
+//             return 'should be answer';
+//           }
+//         }
+//       }
+//     }
+//   }
+//   return 'no solution';
+// }
+
+
+// console.log(findOne(HEROES, { id: 1 }));
+
+// let query = {id : 2};
 
 //findOne(arr, query)
-//take the query, find out how many keys are in it
+// //take the query, find out how many keys are in it
+
 //cycle through the code ^ many times
   //cycle through the heroes code and check if the key matches the others
     //if it does, check the next key in that object and see if the value matches
