@@ -1,5 +1,5 @@
 'use strict';
-// Drill #1
+/*// Drill #1
 
 let loaf = {
   flour: 300,
@@ -13,6 +13,7 @@ console.log(loaf.flour);
 console.log(loaf.water);
 console.log(loaf.hydration());
 
+//Drill #2
 
 const myObj = {
   foo : 'bar',
@@ -29,3 +30,12 @@ function loops(myObj) {
 }
 
 loops(myObj);
+
+
+//Drill #3
+
+let myObj = {
+  meals : ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+
+console.log(myObj.meals[3]); */
